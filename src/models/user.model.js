@@ -6,7 +6,7 @@ const userSchema = new Schema({
   password: { type: String, required: true },
   dob: {
     type: Date,
-    default: "",
+    default: Date.now(),
   },
   bio: { type: String, default: "" },
   posts: [{ type: Schema.Types.ObjectId, ref: "post" }],
